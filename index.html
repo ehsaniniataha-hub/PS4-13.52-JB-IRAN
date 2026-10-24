@@ -161,6 +161,193 @@
     .logline { font-size: 11px; }
     #statusText { font-size: 13px; }
   }
+
+  /* ---------- PS4 blue-wave visual theme (presentation only) ---------- */
+  :root {
+    --bg: #050b1d;
+    --panel: rgba(9, 24, 58, .94);
+    --panel2: rgba(7, 17, 43, .96);
+    --border: #174d9a;
+    --text: #eaf4ff;
+    --dim: #8baedb;
+    --pass: #55f2b2;
+    --fail: #ff647c;
+    --warn: #ffd166;
+    --info: #b8d7ff;
+    --accent: #00a8ff;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse at 15% 0%, rgba(0, 119, 255, .26), transparent 42%),
+      radial-gradient(ellipse at 90% 100%, rgba(40, 70, 255, .20), transparent 44%),
+      linear-gradient(135deg, #030817 0%, #07183a 48%, #03091c 100%);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    padding: 12px;
+  }
+
+  #statusbar, #toolbar, #consoleWrap {
+    border-color: rgba(56, 145, 255, .42);
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .24), inset 0 1px 0 rgba(255,255,255,.035);
+    backdrop-filter: blur(10px);
+  }
+
+  #statusbar {
+    background: linear-gradient(110deg, rgba(12, 38, 88, .96), rgba(7, 17, 44, .94));
+    border-left-width: 4px;
+    padding: 12px 15px;
+  }
+
+  #statusText {
+    color: #f4f9ff;
+    letter-spacing: 1px;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+
+  #statusSub, #toolbar .meta, #toolbar label { color: #9abce8; }
+
+  .chip {
+    border-radius: 999px;
+    background: rgba(4, 14, 37, .82);
+    border-color: rgba(85, 155, 255, .25);
+    padding: 4px 10px;
+  }
+
+  #toolbar {
+    background: linear-gradient(110deg, rgba(8, 27, 66, .96), rgba(5, 15, 39, .96));
+    padding: 9px 10px;
+  }
+
+  button {
+    border-radius: 8px;
+    border-color: #245aa0;
+    background: linear-gradient(180deg, #163d78, #0b2450);
+    color: #edf6ff;
+    padding: 7px 12px;
+    transition: background .15s ease, border-color .15s ease, box-shadow .15s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(180deg, #1e5db0, #10366d);
+    border-color: #48aaff;
+    box-shadow: 0 0 14px rgba(0, 153, 255, .20);
+  }
+
+  button.primary {
+    color: #fff;
+    border-color: #168ee8;
+    background: linear-gradient(135deg, #087fe0, #1747b8);
+  }
+
+  #consoleWrap {
+    background: rgba(2, 7, 20, .96);
+    border-color: rgba(38, 108, 210, .55);
+  }
+
+  #consoleHead {
+    background: linear-gradient(90deg, #0d2c62, #081a3b);
+    border-bottom-color: #174d9a;
+    color: #b5d7ff;
+    letter-spacing: 1.5px;
+  }
+
+  #out {
+    background:
+      linear-gradient(rgba(7, 22, 49, .24), rgba(2, 7, 20, .12)),
+      repeating-linear-gradient(0deg, transparent 0, transparent 25px, rgba(45, 120, 220, .035) 26px);
+    font-family: "Cascadia Mono", Consolas, "Courier New", monospace;
+  }
+
+  .logline.info { color: #b8d7ff; border-left-color: #174d9a; }
+  .logline.debug { color: #6e8ebc; border-left-color: #18335a; }
+  .logline.pass { color: #6fffc1; border-left-color: #38eaa1; background: rgba(13, 66, 49, .28); }
+  .logline.fail { color: #ff8495; border-left-color: #ff647c; background: rgba(82, 15, 35, .28); }
+  .logline.warn { color: #ffda82; border-left-color: #ffd166; background: rgba(88, 62, 12, .22); }
+
+  #out::-webkit-scrollbar-track { background: #06112a; }
+  #out::-webkit-scrollbar-thumb { background: #2057a0; border-radius: 8px; }
+  #out::-webkit-scrollbar-thumb:hover { background: #2f83df; }
+
+  @media (max-width: 640px) {
+    body { padding: 7px; gap: 7px; }
+    #statusbar { padding: 10px; }
+    #toolbar { gap: 6px; }
+    button { padding: 7px 9px; }
+  }
+
+
+  /* ===== New theme: Retro Arcade / Neon Magenta ===== */
+  :root {
+    --bg: #100714;
+    --panel: rgba(35, 10, 39, .96);
+    --panel2: rgba(23, 7, 29, .98);
+    --border: #7c246f;
+    --text: #fff0fb;
+    --dim: #d09bc8;
+    --pass: #8cff6b;
+    --fail: #ff5478;
+    --warn: #ffcf70;
+    --info: #f2b9ff;
+    --accent: #ff4fd8;
+  }
+  body {
+    background:
+      radial-gradient(ellipse at 50% -20%, rgba(255, 54, 201, .28), transparent 55%),
+      radial-gradient(ellipse at 100% 100%, rgba(115, 35, 210, .23), transparent 48%),
+      linear-gradient(145deg, #09040e 0%, #1c0822 52%, #08040e 100%);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    padding: 14px;
+    gap: 10px;
+  }
+  #statusbar, #toolbar, #consoleWrap {
+    border: 1px solid rgba(255, 79, 216, .42);
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.42), 0 0 18px rgba(255, 40, 190, .07), inset 0 1px rgba(255,255,255,.07);
+  }
+  #statusbar {
+    background: linear-gradient(115deg, rgba(67, 15, 69, .96), rgba(26, 8, 36, .96));
+    border-left: 5px solid var(--accent);
+    padding: 15px 17px;
+  }
+  #statusbar.pass { background: linear-gradient(110deg, rgba(15, 58, 38, .97), rgba(20, 12, 34, .96)); }
+  #statusbar.fail { background: linear-gradient(110deg, rgba(76, 13, 37, .97), rgba(27, 8, 36, .96)); }
+  #statusText { color: #fff5ff; font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 1.2px; }
+  #statusSub, #toolbar .meta, #toolbar label { color: #d5a7d4; }
+  .dot { box-shadow: 0 0 12px currentColor; }
+  .chip { border-radius: 999px; background: rgba(18, 5, 25, .9); border-color: rgba(255, 79, 216, .35); padding: 5px 11px; }
+  #toolbar { background: linear-gradient(110deg, rgba(48, 12, 52, .97), rgba(23, 7, 32, .98)); padding: 10px 12px; }
+  button {
+    color: #fff0fb;
+    background: linear-gradient(145deg, #512052, #2b1038);
+    border: 1px solid #9d398f;
+    border-radius: 10px;
+    padding: 8px 13px;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  button:hover { background: linear-gradient(145deg, #792b70, #41174e); border-color: #ff65dd; box-shadow: 0 0 16px rgba(255,79,216,.2); }
+  button:active { transform: scale(.98); }
+  button.primary { color: #fff; border-color: #ff70df; background: linear-gradient(135deg, #f32ab8, #8b35e8); box-shadow: 0 0 18px rgba(243,42,184,.2); }
+  #consoleWrap { background: rgba(10, 4, 15, .98); border-color: rgba(202, 61, 177, .55); }
+  #consoleHead { background: linear-gradient(90deg, #421344, #1b0928); border-bottom-color: #76286f; color: #ffc9f5; letter-spacing: 1.8px; padding: 8px 12px; }
+  #out { background: radial-gradient(ellipse at top left, rgba(92,20,88,.15), transparent 60%), repeating-linear-gradient(0deg, transparent 0, transparent 27px, rgba(255,79,216,.025) 28px); font-family: "Cascadia Mono", Consolas, monospace; }
+  .logline.info { color: #f1c9ff; border-left-color: #9b3a9a; }
+  .logline.debug { color: #9e7ca5; border-left-color: #4a2452; }
+  .logline.pass { color: #a7ff9a; border-left-color: #70f75c; background: rgba(20, 75, 37, .25); }
+  .logline.fail { color: #ff9bb0; border-left-color: #ff5478; background: rgba(90, 12, 37, .25); }
+  .logline.warn { color: #ffdc94; border-left-color: #ffbd4a; background: rgba(92, 52, 10, .2); }
+  #out::-webkit-scrollbar-track { background: #100714; }
+  #out::-webkit-scrollbar-thumb { background: #79286f; border-radius: 8px; }
+  #out::-webkit-scrollbar-thumb:hover { background: #d83bb7; }
+  @media (max-width: 640px) {
+    body { padding: 8px; gap: 8px; }
+    #statusbar { padding: 11px; }
+    #toolbar { gap: 6px; }
+    button { padding: 8px 10px; }
+  }
+
 </style>
 </head>
 <body>
@@ -1282,5 +1469,6 @@ try {
 
 runAttempt();
 </script>
+<footer style="text-align:center; padding:18px 12px; color:#ff4fd8; font-family:inherit; font-size:14px; letter-spacing:1px; text-shadow:0 0 10px rgba(255,79,216,.55);">coded by TAHA by love</footer>
 </body>
 </html>
